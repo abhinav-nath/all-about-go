@@ -1,6 +1,6 @@
 # all-about-go
 
-### Go CLI
+## Go CLI
 
 `go run main.go` - compiles and executes one or two files
 
@@ -13,3 +13,20 @@
 `go get` - downloads the raw source code of someone else's package
 
 `go test` - runs any tests associated with the current project
+
+---
+
+## Go Packages
+
+There are two types of packages in Go
+
+1. **Executable package**
+
+   `package main` defines an executable package. **Must have a func called 'main'**.
+
+2. **Reusable package**
+
+    Any package other than the `package main` is a reusable package that can used as a dependency (a library or a helper code).
+
+    eg: `package calculator`, `package uploader`
+---

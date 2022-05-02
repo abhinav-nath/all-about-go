@@ -1,10 +1,12 @@
 # all-about-go
 
-* [Go CLI](#go-cli)
-* [Go Packages](#go-packages)
-* [Variables in Go](#variables-in-go)
-* [Functions and Return Types](#functions-and-return-types)
-* [Arrays and Slices](#arrays-and-slices)
+- [Go CLI](#go-cli)
+- [Go Packages](#go-packages)
+- [Variables in Go](#variables-in-go)
+- [Functions and Return Types](#functions-and-return-types)
+- [Arrays and Slices](#arrays-and-slices)
+- [Custom Type Declarations](#custom-type-declarations)
+- [Receiver Functions](#receiver-functions)
 
 ## Go CLI
 
@@ -82,8 +84,8 @@ func newCard() string {
 
 ## Arrays and Slices
 
-* **Array** - Fixed length list of things
-* **Slice** - An array that can grow and shrink
+- **Array** - Fixed length list of things
+- **Slice** - An array that can grow and shrink
 
 ### Slice
 
@@ -118,4 +120,50 @@ Output
 0 Ace of Spades
 1 Ace of Diamonds
 2 Queen of Hearts
+```
+
+## Custom Type Declarations
+
+Create a new type of `deck` which is a slice of strings
+
+```go
+type deck []string
+```
+
+We can use it like so
+
+```go
+cards := deck{"Ace of Spades", "Ace of Diamonds"}
+```
+
+## Receiver Functions
+
+```go
+func (d deck) print() {}
+```
+
+`d` - The reference to the actual deck variable
+
+`deck` - Every variable of type `deck` can call this function on itself
+
+deck.go
+
+```go
+type deck []string
+
+func (d deck) print() {
+	for i, card := range d {
+		fmt.Println(i, card)
+	}
+}
+```
+
+main.go
+
+```go
+func main() {
+	cards := deck{"Ace of Spades", "Ace of Diamonds"}
+	cards = append(cards, "Queen of Hearts")
+	cards.print()
+}
 ```

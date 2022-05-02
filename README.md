@@ -1,10 +1,10 @@
 # all-about-go
 
-* Go CLI
-* Go Packages
-* Variables in Go
-* Functions and Return Types
-* Arrays and Slices
+* [Go CLI](#go-cli)
+* [Go Packages](#go-packages)
+* [Variables in Go](#variables-in-go)
+* [Functions and Return Types](#functions-and-return-types)
+* [Arrays and Slices](#arrays-and-slices)
 
 ## Go CLI
 

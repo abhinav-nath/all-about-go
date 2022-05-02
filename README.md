@@ -3,6 +3,8 @@
 * Go CLI
 * Go Packages
 * Variables in Go
+* Functions and Return Types
+* Arrays and Slices
 
 ## Go CLI
 
@@ -62,4 +64,58 @@ name := expression
 
 ```go
 card := "Ace of Spades"
+```
+
+## Functions and Return Types
+
+```go
+func main() {
+	card := newCard()
+
+	fmt.Println(card)
+}
+
+func newCard() string {
+	return "Ace of Spades"
+}
+```
+
+## Arrays and Slices
+
+* **Array** - Fixed length list of things
+* **Slice** - An array that can grow and shrink
+
+### Slice
+
+Declare a slice:
+
+```go
+cards := []string{"Ace of Spades", "Ace of Diamonds"}
+```
+
+Add a new item to the slice:
+
+```go
+cards = append(cards, "Queen of Hearts")
+```
+
+> `append` does not modify the original slice. It creates a new slice instead.
+
+### Iterating Slices
+
+```go
+	cards := []string{"Ace of Spades", "Ace of Diamonds"}
+	cards = append(cards, "Queen of Hearts")
+
+	for i, card := range cards {
+		fmt.Println(i, card)
+	}
+```
+
+Output
+
+```
+0 Ace of Spades
+1 Ace of Diamonds
+2 Queen of Hearts
 ```

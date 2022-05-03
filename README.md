@@ -85,11 +85,11 @@ func newCard() string {
 ## Arrays and Slices
 
 - **Array** - Fixed length list of things
-- **Slice** - An array that can grow and shrink
+- **Slice** - A dynamically-sized, flexible view into the elements of an array
 
 ### Slice
 
-Declare a slice:
+The type `[]T` is a slice with elements of type `T`.
 
 ```go
 cards := []string{"Ace of Spades", "Ace of Diamonds"}
@@ -102,6 +102,20 @@ cards = append(cards, "Queen of Hearts")
 ```
 
 > `append` does not modify the original slice. It creates a new slice instead.
+
+A slice is formed by specifying two indices, a low and high bound, separated by a colon:
+
+```go
+a[low : high]
+```
+
+The following expression creates a slice which includes elements 1 through 3 of `a`:
+
+```go
+a[1:4]
+```
+
+> **Note:** Always remember when you create a slice, it first creates an array and after that return a slice reference to it.
 
 ### Iterating Slices
 

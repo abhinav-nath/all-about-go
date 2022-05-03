@@ -8,6 +8,7 @@
 - [Custom Type Declarations](#custom-type-declarations)
 - [Receiver Functions](#receiver-functions)
 - [String to Byte Array](#string-to-byte-array)
+- [Structs in Go](#structs-in-go)
 
 ## Go CLI
 
@@ -88,10 +89,10 @@ In Go, functions can return multiple values:
 ```go
 func main() {
     color1, color2, color3 := colors()
- 
+
     fmt.Println(color1, color2, color3)
 }
- 
+
 func colors() (string, string, string) {
     return "red", "yellow", "blue"
 }
@@ -202,4 +203,50 @@ func main() {
 ```go
 greeting := "Hello World"
 fmt.Println([]byte(greeting))
+```
+
+## Structs in Go
+
+Struct is a data structure which is a collection of properties that are related together.
+
+```go
+type person struct {
+	firstName string
+	lastName  string
+}
+
+func main() {
+	jim := person{"Jim", "Gordon"}
+	peter := person{firstName: "Peter", lastName: "Parker"}
+
+	var john person
+	john.firstName = "John"
+	john.lastName = "Wick"
+}
+```
+
+Embed one struct inside another struct
+
+```go
+type contactInfo struct {
+	email   string
+	zipCode int
+}
+
+type person struct {
+	firstName string
+	lastName  string
+	contact   contactInfo
+}
+
+func main() {
+	peter := person{
+		firstName: "Peter",
+		lastName:  "Parker",
+		contact: contactInfo{
+			email:   "peter.parker@avengers.com",
+			zipCode: 12012,
+		},
+	}
+}
 ```

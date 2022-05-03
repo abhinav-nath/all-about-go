@@ -7,6 +7,7 @@
 - [Arrays and Slices](#arrays-and-slices)
 - [Custom Type Declarations](#custom-type-declarations)
 - [Receiver Functions](#receiver-functions)
+- [String to Byte Array](#string-to-byte-array)
 
 ## Go CLI
 
@@ -79,6 +80,20 @@ func main() {
 
 func newCard() string {
 	return "Ace of Spades"
+}
+```
+
+In Go, functions can return multiple values:
+
+```go
+func main() {
+    color1, color2, color3 := colors()
+ 
+    fmt.Println(color1, color2, color3)
+}
+ 
+func colors() (string, string, string) {
+    return "red", "yellow", "blue"
 }
 ```
 
@@ -180,4 +195,11 @@ func main() {
 	cards = append(cards, "Queen of Hearts")
 	cards.print()
 }
+```
+
+## String to Byte Array
+
+```go
+greeting := "Hello World"
+fmt.Println([]byte(greeting))
 ```

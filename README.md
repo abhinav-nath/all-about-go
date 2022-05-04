@@ -10,6 +10,7 @@
 - [String to Byte Array](#string-to-byte-array)
 - [Structs in Go](#structs-in-go)
 - [Pass by Value](#pass-by-value)
+- [Maps](#maps)
 
 ## Go CLI
 
@@ -263,12 +264,59 @@ Use pointers to get access to the address of data.
 `*pointer` - give me the value this memory address is pointing at
 
 | Value Types | Reference Types |
-|---|---|
-| int | slices |
-| float | maps |
-| string | channels |
-| bool | pointers |
-| structs | functions |
+| ----------- | --------------- |
+| int         | slices          |
+| float       | maps            |
+| string      | channels        |
+| bool        | pointers        |
+| structs     | functions       |
 
 **Value Types**: Use pointers to change these in a function
 **Reference Types**: Don't worry about pointers with these
+
+## Maps
+
+Map is a data structure that supports key-value pairs.
+
+```go
+func main() {
+	colors := map[string]string{
+		"red":   "#ff000",
+		"green": "#4bf745",
+	}
+
+	fmt.Println(colors)
+}
+```
+
+Another syntax to create maps:
+
+```go
+colors := make(map[string]string)
+
+colors["white"] = "#ffffff"
+
+fmt.Println(colors)
+
+delete(colors, "white")
+```
+
+**Iterating over Maps**
+
+```go
+func main() {
+	colors := map[string]string{
+		"red":   "#ff000",
+		"green": "#4bf745",
+		"white": "#ffffff",
+	}
+
+	printMap(colors)
+}
+
+func printMap(c map[string]string) {
+	for color, hex := range c {
+		fmt.Println("Hex code for", color, "is", hex)
+	}
+}
+```

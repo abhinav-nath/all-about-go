@@ -9,6 +9,7 @@
 - [Receiver Functions](#receiver-functions)
 - [String to Byte Array](#string-to-byte-array)
 - [Structs in Go](#structs-in-go)
+- [Pass by Value](#pass-by-value)
 
 ## Go CLI
 
@@ -250,3 +251,13 @@ func main() {
 	}
 }
 ```
+
+## Pass by Value
+
+Go is a Pass by Value language.
+
+Use pointers to get access to the address of data.
+
+`&variable` - give me the memory address of the value this variable is pointing at
+
+`*pointer` - give me the value this memory address is pointing at

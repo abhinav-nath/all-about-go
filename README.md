@@ -261,3 +261,14 @@ Use pointers to get access to the address of data.
 `&variable` - give me the memory address of the value this variable is pointing at
 
 `*pointer` - give me the value this memory address is pointing at
+
+| Value Types | Reference Types |
+|---|---|
+| int | slices |
+| float | maps |
+| string | channels |
+| bool | pointers |
+| structs | functions |
+
+**Value Types**: Use pointers to change these in a function
+**Reference Types**: Don't worry about pointers with these

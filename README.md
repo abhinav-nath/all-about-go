@@ -331,3 +331,9 @@ Normally you have to write code to say `My type Foo implements interface Bar`.
 In Go **interface resolution is implicit**. If the type you pass in matches what the interface is asking for, it will compile.
 
 To implement an interface in Go, we just need to implement all the methods in the interface.
+
+If you are an OOP programmer, you might have used implement keyword a lot while implementing an interface. But in Go, **you do not explicitly mention if a type implements an interface**.
+
+If a type implements a method with **name** and **signature** defined in an interface, then that type **implements** that interface.
+
+Like saying _if it walks like a duck, swims like a duck and quacks like a duck, then it is a duck_.

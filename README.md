@@ -11,6 +11,7 @@
 - [Structs in Go](#structs-in-go)
 - [Pass by Value](#pass-by-value)
 - [Maps](#maps)
+- [Interfaces](#interfaces)
 
 ## Go CLI
 
@@ -320,3 +321,5 @@ func printMap(c map[string]string) {
 	}
 }
 ```
+
+## Interfaces

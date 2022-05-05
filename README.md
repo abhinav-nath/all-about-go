@@ -323,3 +323,11 @@ func printMap(c map[string]string) {
 ```
 
 ## Interfaces
+
+Interfaces in Go are quite different to interfaces in most other programming languages.
+
+Normally you have to write code to say `My type Foo implements interface Bar`.
+
+In Go **interface resolution is implicit**. If the type you pass in matches what the interface is asking for, it will compile.
+
+To implement an interface in Go, we just need to implement all the methods in the interface.

@@ -337,3 +337,7 @@ If you are an OOP programmer, you might have used `implements` keyword a lot whi
 If a type implements a method with **name** and **signature** defined in an interface, then that type **implements** that interface.
 
 Like saying _if it walks like a duck, swims like a duck and quacks like a duck, then it is a duck_.
+
+**Interface syntax:**
+
+![Go Interface Syntax](./images/go-interface-syntax.png "Go Interface Syntax")

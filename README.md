@@ -12,6 +12,8 @@
 - [Pass by Value](#pass-by-value)
 - [Maps](#maps)
 - [Interfaces](#interfaces)
+- [Go Routines](#go-routines)
+- [Channels](#channels)
 
 ## Go CLI
 
@@ -341,3 +343,25 @@ Like saying _if it walks like a duck, swims like a duck and quacks like a duck, 
 **Interface syntax:**
 
 ![Go Interface Syntax](./images/go-interface-syntax.png "Go Interface Syntax")
+
+## Go Routines
+
+Normally in Go when we call a function `doSomething()` we wait for it to return (even if it has no value to return, we still wait for it to finish).
+We say that this operation is _blocking_ - it makes us wait for it to finish.
+An operation that does not block in Go will run in a separate _process_ called a _goroutine_.
+
+To tell Go to start a new goroutine we turn a function call into a `go` statement by putting the keyword `go` in front of it: `go doSomething()`
+
+![Blocking Process](./images/blocking-process.png "Blocking Process")
+
+![goroutine](./images/goroutine.png "goroutine")
+
+![Early Exit](./images/program-early-exit.png "Early Exit")
+
+## Channels
+
+![Channels](./images/channels.png "Channels")
+
+![Channel](./images/channel.png "Channel")
+
+![Blocking Channel](./images/blocking-channel.png "Blocking Channel")
